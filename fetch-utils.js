@@ -9,5 +9,13 @@ export async function fetchAllGemstonez() {
   .from('gemstonez')
   .select('*');
 
-	return data.data;
+	return data;
+}
+
+export async function fetchAllAnimalz() {
+	const data = await supabase
+  .from('favorite_animalz')
+  .select('*');
+
+	return data;
 }
