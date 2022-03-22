@@ -1,5 +1,4 @@
 
-
 export function renderGemstonez(gem) {
     const gemstoneEl = document.createElement('div');
     const nameEl = document.createElement('h4');
@@ -26,4 +25,29 @@ export function renderGemstonez(gem) {
     gemstoneEl.append(nameEl, varietyEl, colorEl, propertiesEl);
 
     return gemstoneEl;
+}
+
+export function renderAnimalz(animal) {
+	const animalEl = document.createElement('div');
+	const nameEl = document.createElement('h4');
+	const typeEl = document.createElement('p');
+	const	lifespanEl = document.createElement('p');
+	const habitatsEl = document.createElement('ul');
+
+	animalEl.classList.add('animal');
+
+	nameEl.textContent = animal.Name;
+	typeEl.textContent = animal.Type;
+	lifespanEl.textContent = animal.Lifespan;
+
+	for (let habitat of animal.Habitat) {
+
+		const habitatEl = document.createElement('li');
+
+		habitatEl.textContent = habitat;
+
+		habitatsEl.appendChild(habitatEl);
+	}
+	animalEl.append(nameEl, typeEl, lifespanEl, habitatsEl);
+	return animalEl;
 }
