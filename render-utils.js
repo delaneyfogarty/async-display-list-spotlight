@@ -81,3 +81,23 @@ export function renderSingerz(singer) {
 	return singerEl;
 
 }
+
+export function renderPlacez(place) {
+	const placeEl = document.createElement('div');
+	const locationEl = document.createElement('h4');
+	const countryEl = document.createElement('p');
+	const	memoryEl = document.createElement('p');
+	const foodEl = document.createElement('p');
+
+	placeEl.classList.add('place');
+
+	locationEl.textContent = place.Location;
+	countryEl.textContent = place.Country;
+	memoryEl.textContent = place.Favorite_Memory;
+	foodEl.textContent = place.Good_Food;
+
+	placeEl.append(locationEl, countryEl, memoryEl, foodEl);
+
+	return placeEl;
+}
+
