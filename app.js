@@ -4,7 +4,7 @@ import { fetchAllGemstonez } from './fetch-utils.js';
 const gemstonezListEl = document.querySelector('.gemstone-list');
 
 window.addEventListener('load', async () => {
-  await fetchAndDisplayGemstonez();
+  fetchAndDisplayGemstonez();
 });
 
 

@@ -9,13 +9,13 @@ export function renderGemstonez(gem) {
 
     gemstoneEl.classList.add('gem');
 
-    nameEl.textContent = gem.name;
-    varietyEl.textContent = gem.variety;
-    colorEl.textContent = gem.color;
-    propertiesEl.textContent = gem.properties;
+    nameEl.textContent = gem.Name;
+    varietyEl.textContent = gem.Variety;
+    colorEl.textContent = gem.Color;
+    //propertiesEl.textContent = gem.Properties;
+		console.log(nameEl, gem);
 
-
-    for (let property of gem.properties) {
+    for (let property of gem.Properties) {
         const propertyEl = document.createElement('li');
 
         propertyEl.textContent = property;

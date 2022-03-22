@@ -9,5 +9,5 @@ export async function fetchAllGemstonez() {
   .from('gemstonez')
   .select('*');
 
-	return data;
+	return data.data;
 }
