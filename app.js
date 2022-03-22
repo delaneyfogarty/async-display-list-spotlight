@@ -1,15 +1,17 @@
-import { renderGemstonez, renderAnimalz, renderSingerz } from './render-utils.js';
-import { fetchAllAnimalz, fetchAllGemstonez, fetchAllSingerz } from './fetch-utils.js';
+import { renderGemstonez, renderAnimalz, renderSingerz, renderPlacez } from './render-utils.js';
+import { fetchAllAnimalz, fetchAllGemstonez, fetchAllSingerz, fetchAllPlacez } from './fetch-utils.js';
 
 const gemstonezListEl = document.querySelector('.gemstone-list');
 const animalzListEl = document.querySelector('.animalz-list');
 const singerzListEl = document.querySelector('.singerz-list');
+const placezListEl = document.querySelector('.placez-list');
 
 
 window.addEventListener('load', async () => {
   fetchAndDisplayGemstonez();
   fetchAndDisplayAnimalz();
   fetchAndDisplaySingerz();
+  fetchAndDisplayPlacez();
 });
 
 
@@ -42,5 +44,16 @@ async function fetchAndDisplaySingerz() {
   for (let singer of singerz) {
     const singerEl = renderSingerz(singer);
     singerzListEl.append(singerEl);
+  }
+}
+
+async function fetchAndDisplayPlacez() {
+
+  const placez = await fetchAllPlacez();
+
+  for (let place of placez) {
+    const placeEl = renderPlacez(place);
+    placezListEl.append(placeEl);
+
   }
 }

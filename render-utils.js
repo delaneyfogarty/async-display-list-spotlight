@@ -91,10 +91,10 @@ export function renderPlacez(place) {
 
 	placeEl.classList.add('place');
 
-	locationEl.textContent = place.Location;
+	locationEl.textContent = `Favorite Place: ${place.Location}`;
 	countryEl.textContent = place.Country;
-	memoryEl.textContent = place.Favorite_Memory;
-	foodEl.textContent = place.Good_Food;
+	memoryEl.textContent = `Favorite Memory: ${place.Favorite_Memory}`;
+	foodEl.textContent = `Best Food: ${place.Good_Food}`;
 
 	placeEl.append(locationEl, countryEl, memoryEl, foodEl);
 
