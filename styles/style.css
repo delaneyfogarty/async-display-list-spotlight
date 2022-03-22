@@ -117,3 +117,28 @@ footer {
     display: flex;
     flex-wrap: wrap;
 }
+
+.singerz p {
+    margin: 5px;
+}
+
+.singer {
+    padding: 30px;
+    box-shadow: 5px 8px 6px 5px rgba(218, 25, 57, 0.28);
+}
+
+.singerz-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.singer img {
+    width: 175px;
+}
+
+.singer ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}

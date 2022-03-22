@@ -65,10 +65,10 @@ export function renderSingerz(singer) {
 
 	nameEl.textContent = singer.Name;
 	imgEl.src = singer.Image;
-	ageEl.textContent = singer.Age;
-	firstAlbumEl.textContent = singer.First_Album;
+	ageEl.textContent = `Age: ${singer.Age}`;
+	firstAlbumEl.textContent = `First Album: ${singer.First_Album}`;
 
-	for (let song of singer.Favorite_Songs) {
+	for (let song of `Favorite Songs:${singer.Favorite_Songs}`) {
 		const songEl = document.createElement('li');
 
 		songEl.textContent = song;
