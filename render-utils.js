@@ -52,3 +52,32 @@ export function renderAnimalz(animal) {
 
 	return animalEl;
 }
+
+export function renderSingerz(singer) {
+	const singerEl = document.createElement('div');
+	const nameEl = document.createElement('h4');
+	const imgEl = document.createElement('img');
+	const ageEl = document.createElement('p');
+	const firstAlbumEl = document.createElement('p');
+	const favoriteSongsEl = document.createElement('ul');
+
+	singerEl.classList.add('singer');
+
+	nameEl.textContent = singer.Name;
+	imgEl.src = singer.Image;
+	ageEl.textContent = singer.Age;
+	firstAlbumEl.textContent = singer.First_Album;
+
+	for (let song of singer.Favorite_Songs) {
+		const songEl = document.createElement('li');
+
+		songEl.textContent = song;
+
+		favoriteSongsEl.appendChild(songEl);
+	}
+
+	singerEl.append(nameEl, imgEl, ageEl, firstAlbumEl, favoriteSongsEl);
+
+	return singerEl;
+
+}
