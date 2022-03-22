@@ -27,3 +27,11 @@ export async function fetchAllSingerz() {
 
 	return data.data;
 }
+
+export async function fetchAllPlacez() {
+	const data = await client
+	.from('favorite_placez')
+	.select('*');
+
+	return data.data;
+}
