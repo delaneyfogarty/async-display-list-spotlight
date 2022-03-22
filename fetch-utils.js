@@ -9,13 +9,21 @@ export async function fetchAllGemstonez() {
   .from('gemstonez')
   .select('*');
 
-	return data;
+	return data.data;
 }
 
 export async function fetchAllAnimalz() {
-	const data = await supabase
+	const data = await client
   .from('favorite_animalz')
   .select('*');
 
-	return data;
+	return data.data;
+}
+
+export async function fetchAllSingerz() {
+	const data = await client
+	.from('favorite_singerz')
+	.select('*');
+
+	return data.data;
 }

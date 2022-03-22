@@ -49,5 +49,6 @@ export function renderAnimalz(animal) {
 		habitatsEl.appendChild(habitatEl);
 	}
 	animalEl.append(nameEl, typeEl, lifespanEl, habitatsEl);
+
 	return animalEl;
 }
