@@ -1,4 +1,4 @@
-import { fetchAllGemstonez } from './fetch-utils.js';
+
 
 export function renderGemstonez(gem) {
     const gemstoneEl = document.createElement('div');
@@ -12,9 +12,10 @@ export function renderGemstonez(gem) {
     nameEl.textContent = gem.name;
     varietyEl.textContent = gem.variety;
     colorEl.textContent = gem.color;
-    propertiesEl.textContent = gem.uses;
+    propertiesEl.textContent = gem.properties;
 
-    for (let property of propertiesEl) {
+
+    for (let property of gem.properties) {
         const propertyEl = document.createElement('li');
 
         propertyEl.textContent = property;

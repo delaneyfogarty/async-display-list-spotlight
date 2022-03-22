@@ -1,11 +1,12 @@
 import { renderGemstonez } from './render-utils.js';
 import { fetchAllGemstonez } from './fetch-utils.js';
 
+const gemstonezListEl = document.querySelector('.gemstone-list');
+
 window.addEventListener('load', async () => {
-  fetchAndDisplayGemstonez();
+  await fetchAndDisplayGemstonez();
 });
 
-const gemstonezListEl = document.querySelector('.gemstone-list');
 
 async function fetchAndDisplayGemstonez() {
 
