@@ -1,8 +1,19 @@
-// import functions and grab DOM elements
+import { renderGemstonez } from './render-utils.js';
+import { fetchAllGemstonez } from './fetch-utils.js';
 
-// let state
+window.addEventListener('load', async () => {
+  fetchAndDisplayGemstonez();
+});
 
-// set event listeners 
-  // get user input
-  // use user input to update state 
-  // update DOM to reflect the new state
+const gemstonezListEl = document.querySelector('.gemstone-list');
+
+async function fetchAndDisplayGemstonez() {
+
+  const gemstonez = await fetchAllGemstonez();
+
+  for (let gemstone of gemstonez) {
+    const gemstoneEl = renderGemstonez(gemstone);
+
+    gemstonezListEl.append(gemstoneEl);
+  }
+}
